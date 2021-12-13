@@ -6,8 +6,14 @@ function isParenthesis(str){
 
     for(var i=0; i<myArray.length; i++){
         const index = open.indexOf(myArray[i]);
-        if(close[index] != myArray[i+1]  || close[index] != myArray[count]){
+        if(close[index] != myArray[i+1]  && close[index] != myArray[count]){
             return false;
+        }
+        if(close[index] == myArray[i+1]){
+            i++;
+        }
+        if(close[index] == myArray[count] && count == myArray.length/2){
+            break;
         }
         count--;
     }
