@@ -1,7 +1,7 @@
 function isParenthesis(str){
     const open = ["(", "[", "{"];
     const close = [")", "]", "}"];
-    const myArray = str.split(",");
+    const myArray = str.split("");
     var count = myArray.length-1;
 
     for(var i=0; i<myArray.length; i++){
